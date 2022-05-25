@@ -1,5 +1,5 @@
 
-let mapOptions = {'center': [34.0709,-118.444],'zoom':15.3}
+let mapOptions = {'center': [34.0709,-118.444],'zoom':15}
 
 
 const map = L.map('the_map').setView(mapOptions.center, mapOptions.zoom);
@@ -12,7 +12,10 @@ const q1 = 'What deters you from recycling and/or composting at UCLA?';
 const q2 = 'Which location on or near campus would you MOST like to see more recycling/compost bins on campus?';
 const q3 = 'Why do you think that UCLA has not met its Zero Waste Goal in the past?';
 const q4 = 'What else can UCLA/LA do better to encourage waste reduction and make recycling/composting more accessible?';
-
+var lats = new Array();
+var lngs = new Array();
+lats.push(34.0709);
+lngs.push(-118.444);
 //LOAD RESPONSES
 
 function loadData(url){
@@ -30,6 +33,8 @@ function processData(results){
         console.log(data)
         addMarker(data)
         addSlide(data)
+        lats.push(data.lat)
+        lngs.push(data.lng)
     })
 }
 
@@ -70,7 +75,7 @@ function addSlide(data){
     container.appendChild(div);
 }
 
-var slideIndex = 1;
+var slideIndex = 0;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -84,13 +89,14 @@ function currentSlide(n) {
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    console.log(slides.length)
-    if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
+    if (n == slides.length) {slideIndex = 0}
+      if (n < 0) {slideIndex = slides.length-1}
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-    slides[slideIndex-1].style.display = "block";
-  
+    slides[slideIndex].style.display = "block";
+    //map zoom to marker
+    if (slideIndex == 0){map.flyTo([34.0709,-118.444],15)}
+    else{map.flyTo([lats[slideIndex],lngs[slideIndex]],18)}
   }
 
