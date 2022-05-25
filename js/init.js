@@ -73,6 +73,11 @@ function addSlide(data){
     text.innerHTML = data[q1];
     div.appendChild(text);
     container.appendChild(div);
+    p = document.createElement("p");
+    p.classList.add("myText");
+    p.innerHTML = data[q2];
+    div.appendChild(p);
+    container.appendChild(div);
 }
 
 var slideIndex = 0;
