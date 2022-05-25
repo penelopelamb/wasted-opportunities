@@ -54,14 +54,14 @@ function addSurvey(title){
     document.getElementById("survey").appendChild(newButton);
 }
 
+//addSurvey('Take the survey!')
+
 // create a function to add markers
 function addMarker(data){
     L.marker([data.lat,data.lng]).addTo(map)
 }
 
 loadData(dataUrl)
-addSurvey('Take the survey!')
-
 
 //SLIDESHOW
 container = document.querySelector(".slideshow-container")
