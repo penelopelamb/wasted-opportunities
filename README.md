@@ -29,14 +29,13 @@ Although we narrowed our scope to target only students, there are still a wide v
 We hope that this project will bring awareness to UCLA’s zero waste goals. Our map filled with waste ‘profiles’ of the community will provide anecdotes and insight as to why UCLA is missing its zero waste target. By surveying a variety of student community members, we hope to make a diverse map displaying people's perceptions, habits, and relationships to waste reduction, which could help explain the lack of compliance with UCLA’s waste reduction efforts and spark more interest in reducing waste. The mapplication could be distributed to UCLA’s Environmental Student Network and the sustainability team of the housing association, where it could be shared along with current waste reduction infographics on the hill. We can also provide our mapplication to UCLA Sustainability’s Zero Waste team so that they are better informed about student waste habits.
 
 ### How others can use this project in the future.
-
+blah blah
 
 ## :seedling:Features
 
 ## :seedling:The Mapplication
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
-
 
 ## Acknowledgements
 - This project was created as part of the AAS191A: Web Development and GIS for Social Change course at UCLA.
