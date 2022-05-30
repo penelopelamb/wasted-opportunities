@@ -5,11 +5,11 @@
 
 ## Table of Contents
 * [Objective](#seedlingobjective)
-* [Who is being empowered?](#who-is-being-empowered)
-* [What technology was used?](#what-technology-was-used)
-* [How it can be repurposed?](#how-it-can-be-repurposed)
-* [Features](#screenshots)
-* [The Mapplication](#screenshots)
+* [Who is being empowered?](#seedlingwho-is-being-empowered)
+* [What technology was used?](#seedlingwhat-technology-was-used)
+* [How it can be repurposed?](#seedlinghow-it-can-be-repurposed)
+* [Features](#seedlingfeatures)
+* [The Mapplication](#seedlingthe-mapplication)
 
 ## :seedling:Objective
 ### What social problem is being addressed?
