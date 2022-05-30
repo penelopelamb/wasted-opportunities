@@ -1,37 +1,75 @@
 body{
-    background-color: rgb(200, 233, 168);
     gap: 70px;
+    background-image: linear-gradient(rgb(227, 254, 165), rgb(12, 35, 7));
+    background-size: 100px;
 }
 
 header{
     grid-area: header;
-    text-align: center;
-    color: rgb(0, 59, 0);
-    font-family: optima;
+    width: 100%;
+	    height: 125px;
+	    position: relative;
 }
 
-h1{
-  font-size: 8vh;
+h1#logo{
+	  top: -10px;
+	  left: 7%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+    font-size: 3rem;
+	  position: absolute;
+    color: rgb(0, 59, 0);
 }
 
 #description{
     grid-area: description;
     text-align: center;
-    color: rgb(0, 59, 0);
-    padding-left: 20%;
-    padding-right: 20%;
-    font-family: optima;
+    color: rgb(255, 255, 232);
+    padding-top: 3%;
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-bottom: 5%;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
+
+#subheading{
+    font-family: 'Poppins', sans-serif;
+}
+
+#link{
+    color: rgb(245, 245, 198);
+    font-family: 'Poppins', sans-serif;
+}
+
+#about{
+    background-color: rgb(255, 255, 219);
+    padding-top: 25px;
+    padding-bottom: 5%;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: 'Raleway', sans-serif;;
+    width: 75%;
+    margin: 0 auto;
 }
 
 #footer{
     grid-area: footer;
-    color: rgb(0, 59, 0);
+    color: beige;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: small;
+    display: block;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
 
 .main{
     grid-area: main_content;  
-    padding-left: 1vh;
-    padding-right: 1vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "main_map slideshow";
     display: grid;
@@ -39,6 +77,7 @@ h1{
 
 #contents{
     grid-area: content;
+    background-color: white;
 }
 
 #the_map{
@@ -51,16 +90,16 @@ h1{
     grid-area: slideshow;
     height: 80vh;
     position: relative;
-    background: #fffbdcf1;
+    background: rgb(255, 255, 216);
   }
   
   /* Slides */
   .mySlides {
     display: none;
-    padding: 50px;
+    padding: 70px;
     text-align: center;
     text-justify: auto;
-    font-family: optima;
+    font-family: 'Raleway', sans-serif;
   }
   
   /* Next & previous buttons */
@@ -87,8 +126,74 @@ h1{
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-    color: white;
+    background-color: rgba(4, 18, 0, 0.8);
+    color: beige;
   }
   
   q {font-style: italic;}
+
+
+/* ///// MENU BAR ///// */
+
+nav
+{
+	height: 150px;
+	width: 75%;
+	position: absolute;
+	top: 0;
+	right: 2%;
+	text-align: right;
+}
+
+nav ul#main_menu
+{
+    list-style-type: none;
+    position: absolute;
+    bottom: 45px;
+    right: 5%;
+    z-index: 400;
+}
+
+nav ul#main_menu li
+{
+	display: inline;
+}
+
+nav ul#main_menu li a
+{
+	padding: 14px 14px;
+	letter-spacing: 0px;
+	text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+	color: #0d2745;
+	font-size: 16px;
+	font-weight: 500;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+
+nav ul#main_menu li a:hover
+{
+	color: black;
+}
+
+nav ul#main_menu li a:after
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background: #0d2745;
+	width: 0%;
+	content: '.';
+	color: transparent;
+	height: 2px;
+}
+
+nav ul#main_menu li a:hover:after
+{
+	width: 100%;
+}
