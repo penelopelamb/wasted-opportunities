@@ -4,29 +4,12 @@
 > Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
-Objectives
-Empowerment
-Technologies
-Repurposed
-Features
-Mapplication
-Objective (Assignment #1)
-
-Who is being empowered (Assignment #2)
-
-What technology was used (Assignment #5)
-
-How it can be repurposed (Assignment #5)
-
-The features and a screenshot(s) of the mapplication
 * [Objective](#objective)
-* [Who is being empowered?](#who-is-being-empowered?)
-* [What technology was used?](#what-technology-was-used?)
-* [How it can be repurposed?](#how-it-can-be repurposed?)
+* [Who is being empowered?](#who-is-being-empowered)
+* [What technology was used?](#what-technology-was-used)
+* [How it can be repurposed?](#how-it-can-be-repurposed)
 * [Features](#screenshots)
 * [The Mapplication](#screenshots)
-<!-- * [License](#license) -->
-
 
 ## Objective
 ### What social problem is being addressed?
