@@ -4,7 +4,7 @@
 > Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
-* [Objective](#seedling-objective)
+* [Objective](#seedlingobjective)
 * [Who is being empowered?](#who-is-being-empowered)
 * [What technology was used?](#what-technology-was-used)
 * [How it can be repurposed?](#how-it-can-be-repurposed)
