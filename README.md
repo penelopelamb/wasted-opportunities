@@ -28,20 +28,29 @@ Although we narrowed our scope to target only students, there are still a wide v
 We hope that this project will bring awareness to UCLA’s zero waste goals. Our map filled with waste ‘profiles’ of the community will provide anecdotes and insight as to why UCLA is missing its zero waste target. By surveying a variety of student community members, we hope to make a diverse map displaying people's perceptions, habits, and relationships to waste reduction, which could help explain the lack of compliance with UCLA’s waste reduction efforts and spark more interest in reducing waste. The mapplication could be distributed to UCLA’s Environmental Student Network and the sustainability team of the housing association, where it could be shared along with current waste reduction infographics on the hill. We can also provide our mapplication to UCLA Sustainability’s Zero Waste team so that they are better informed about student waste habits.
 
 ### How others can use this project in the future.
-
+UCLA students and future community members can use this mapplication to gain a deeper understanding of the different perspectives surrounding waste management on campus. As more students add their stories, hopefully future students will be able to use this as a tool to gauge how the student body is feeling towards UCLA's goals. It can also be a place to see that they are not alone in their feelings towards the current program. UCLA Sustainability and other campus environmental organizations can utilize our project to gather data on public perception and potentially try out some of the suggested solutions from the responses. By returning to the website to click and read through student stories, student community members and UCLA admin can better understand where students are coming from and enact change.
 
 ## :seedling:The Mapplication
 ### Features
 1. Interactive Map
-The Leaflet Map is very interactive for the user. It is centered around UCLA's campus, and the markers are indicative of each student response and where they live. By clicking on a marker, the map will fly to that marker and it will be the only marker with full opacity in color. Furthermore, clicking a marker creates a pop-up displaying the respondent's profile, including Major and Campus Affiliations. The slideshow to the right of the map also changes to that respondent's survey answers, creating a full story for this community member. 
+
+The Leaflet Map is very interactive for the user. It is centered around UCLA's campus, and the markers are indicative of each student response and where they live. By clicking on a marker, the map will fly to that marker and it will be the only marker highlighted. Furthermore, clicking a marker creates a pop-up displaying the respondent's profile, including Major and Campus Affiliations. The slideshow to the right of the map also changes to that respondent's survey answers, creating a full story for this community member. 
 
 2. Slideshow
-The Slideshow is also interactive for the user and connects with our map. When you first enter the website, the slideshow displays a welcome message and some basic information about the project. There are also simply instructions on how to navigate the site's Home Page and see student stories. As you click through the slideshow, you will see each respondent's open response survey questions
 
-4. Menu Bar
-3. Descriptions
-4. About Page
-5. Survey Buttom
+The Slideshow is also interactive for the user and connects with our map. When you first enter the website, the slideshow displays a welcome message and some basic information about the project. There are also simply instructions on how to navigate the site's Home Page and see student stories. As you click through the slideshow, you will see each respondent's open response survey questions on a different page. Clicking through also results in the map flying to each student's marker and displaying their full profile and story.
+
+3. Menu Bar + Survey Button
+
+The menu bar at the top of the mapplication allows for easy navigation between the Home page and About page. It also holds our 'Add Your Story' button, which leads users to the survey we built for this project.
+
+4. Descriptions
+
+Underneath our map and slideshow, there are descriptions to the project and UCLA Zero Waste. Along with these descriptions, there are links to find out more about both topics.
+
+5. About Page
+
+The About page serves as a place where users can learn more details about the project without taking space away or distracting from the main map feature on the Home page.
 
 ### Screenshots
 Wasted Opportunities Home Page:
