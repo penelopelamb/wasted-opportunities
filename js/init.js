@@ -137,6 +137,7 @@ function showSlides(n) {
         allMarkers.forEach(function(marker) {
             marker.setOpacity(10);
         });
+        map.closePopup();
     }
     else{
         map.flyTo([lats[slideIndex],lngs[slideIndex]],17)
