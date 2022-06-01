@@ -14,6 +14,8 @@ const q3 = 'Why do you think that UCLA has not met its Zero Waste Goal in the pa
 const q4 = 'What else can UCLA/LA do better to encourage waste reduction and make recycling/composting more accessible?';
 var lats = new Array();
 var lngs = new Array();
+var allMarkers = new Array();
+
 lats.push(34.0709);
 lngs.push(-118.444);
 //LOAD RESPONSES
@@ -29,7 +31,6 @@ function loadData(url){
 function processData(results){
     console.log(results)
     results.data.forEach(data => {
-        //how to check if there was a response?
         console.log(data)
         addMarker(data)
         addSlide(data)
@@ -58,7 +59,20 @@ function addSurvey(title){
 
 // create a function to add markers
 function addMarker(data){
-    L.marker([data.lat,data.lng]).addTo(map)
+    var marker = L.marker([data.lat,data.lng]).addTo(map).on('click', function(){
+        temp = 1;
+        while(lats.indexOf(data.lat, temp) != lngs.indexOf(data.lng, temp)){
+            temp++
+        }
+        slideIndex = lats.indexOf(data.lat,temp);
+        showSlides(slideIndex);
+        allMarkers.forEach(function(marker) {
+            marker.setOpacity(0.25);
+        });
+        allMarkers[slideIndex-1].setOpacity(10);
+    });
+    allMarkers.push(marker);
+
 }
 
 loadData(dataUrl)
@@ -98,10 +112,15 @@ function showSlides(n) {
       if (n < 0) {slideIndex = slides.length-1}
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+
       }
     slides[slideIndex].style.display = "block";
     //map zoom to marker
     if (slideIndex == 0){map.flyTo([34.0709,-118.444],15)}
-    else{map.flyTo([lats[slideIndex],lngs[slideIndex]],18)}
+    else{map.flyTo([lats[slideIndex],lngs[slideIndex]],17)
+        allMarkers.forEach(function(marker) {
+            marker.setOpacity(0.25);
+        });
+        allMarkers[slideIndex-1].setOpacity(10);}
   }
 
