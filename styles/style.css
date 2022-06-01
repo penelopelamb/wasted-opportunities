@@ -66,6 +66,8 @@ h1#logo{
     width: 95%;
 }
 
+
+
 .main{
     grid-area: main_content;  
     padding-left: 10vh;
@@ -74,6 +76,7 @@ h1#logo{
     grid-template-areas: "main_map slideshow";
     display: grid;
 }
+
 
 #contents{
     grid-area: content;
