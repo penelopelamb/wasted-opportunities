@@ -32,23 +32,23 @@ UCLA students and future community members can use this mapplication to gain a d
 
 ## :seedling:The Mapplication
 ### Features
-1. Interactive Map
+1. **Interactive Map**
 
 The Leaflet Map is very interactive for the user. It is centered around UCLA's campus, and the markers are indicative of each student response and where they live. By clicking on a marker, the map will fly to that marker and it will be the only marker highlighted. Furthermore, clicking a marker creates a pop-up displaying the respondent's profile, including Major and Campus Affiliations. The slideshow to the right of the map also changes to that respondent's survey answers, creating a full story for this community member. 
 
-2. Slideshow
+2. **Slideshow**
 
 The Slideshow is also interactive for the user and connects with our map. When you first enter the website, the slideshow displays a welcome message and some basic information about the project. There are also simply instructions on how to navigate the site's Home Page and see student stories. As you click through the slideshow, you will see each respondent's open response survey questions on a different page. Clicking through also results in the map flying to each student's marker and displaying their full profile and story.
 
-3. Menu Bar + Survey Button
+3. **Menu Bar + Survey Button**
 
 The menu bar at the top of the mapplication allows for easy navigation between the Home page and About page. It also holds our 'Add Your Story' button, which leads users to the survey we built for this project.
 
-4. Descriptions
+4. **Descriptions**
 
 Underneath our map and slideshow, there are descriptions to the project and UCLA Zero Waste. Along with these descriptions, there are links to find out more about both topics.
 
-5. About Page
+5. **About Page**
 
 The About page serves as a place where users can learn more details about the project without taking space away or distracting from the main map feature on the Home page.
 
