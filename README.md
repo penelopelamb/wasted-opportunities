@@ -8,7 +8,6 @@
 * [Who is being empowered?](#seedlingwho-is-being-empowered)
 * [What technology was used?](#seedlingwhat-technology-was-used)
 * [How it can be repurposed?](#seedlinghow-it-can-be-repurposed)
-* [Features](#seedlingfeatures)
 * [The Mapplication](#seedlingthe-mapplication)
 
 ## :seedling:Objective
@@ -29,12 +28,30 @@ Although we narrowed our scope to target only students, there are still a wide v
 We hope that this project will bring awareness to UCLA’s zero waste goals. Our map filled with waste ‘profiles’ of the community will provide anecdotes and insight as to why UCLA is missing its zero waste target. By surveying a variety of student community members, we hope to make a diverse map displaying people's perceptions, habits, and relationships to waste reduction, which could help explain the lack of compliance with UCLA’s waste reduction efforts and spark more interest in reducing waste. The mapplication could be distributed to UCLA’s Environmental Student Network and the sustainability team of the housing association, where it could be shared along with current waste reduction infographics on the hill. We can also provide our mapplication to UCLA Sustainability’s Zero Waste team so that they are better informed about student waste habits.
 
 ### How others can use this project in the future.
-blah blah
 
-## :seedling:Features
 
 ## :seedling:The Mapplication
-![Example screenshot](./img/screenshot.png)
+### Features
+1. Interactive Map
+The Leaflet Map is very interactive for the user. It is centered around UCLA's campus, and the markers are indicative of each student response and where they live. By clicking on a marker, the map will fly to that marker and it will be the only marker with full opacity in color. Furthermore, clicking a marker creates a pop-up displaying the respondent's profile, including Major and Campus Affiliations. The slideshow to the right of the map also changes to that respondent's survey answers, creating a full story for this community member. 
+
+2. Slideshow
+The Slideshow is also interactive for the user and connects with our map. When you first enter the website, the slideshow displays a welcome message and some basic information about the project. There are also simply instructions on how to navigate the site's Home Page and see student stories. As you click through the slideshow, you will see each respondent's open response survey questions
+
+4. Menu Bar
+3. Descriptions
+4. About Page
+5. Survey Buttom
+
+### Screenshots
+Wasted Opportunities Home Page:
+![Wasted Opportunities Home Page](./img/WO_fullsite.png)
+
+Wasted Opportunities Map Feature, Student Profile:
+![Wasted Opportunities Map Feature](./img/WO_map.png)
+
+Wasted Opportunities About Page:
+![Wasted Opportunities About Page](./img/WO_about.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Acknowledgements
