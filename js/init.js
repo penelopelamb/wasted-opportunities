@@ -98,6 +98,7 @@ function addSlide(data){
 }
 
 function addText(div,question,response){
+    if (response == ""){response = "N/A"}
     q = document.createElement("h4");
     q.classList.add("myText");
     node = document.createTextNode(question);
