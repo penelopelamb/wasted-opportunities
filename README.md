@@ -1,6 +1,8 @@
 # Wasted Opportunities
 ### By Penelope (Lillan) Lamb + Pawan (Sine) Polcharoen
 > Wasted Opportunities is a mapplication (map application) project that displays UCLA students’ stories centered around waste management and reduction. Through these stories, we hope to gain a deeper understanding of the community’s waste management habits and reasons for avoiding sustainable waste practices.
+> 
+> This website functions best on Firefox.
 > Live demo [_here_](https://penelopelamb.github.io/wasted-opportunities/index.html).
 
 ## Table of Contents
