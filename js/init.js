@@ -18,6 +18,8 @@ var lats = new Array();
 var lngs = new Array();
 var allMarkers = new Array();
 
+let marker = L.markerClusterGroup();
+
 lats.push(34.0709);
 lngs.push(-118.444);
 //LOAD RESPONSES
@@ -46,7 +48,7 @@ function processData(results){
 //BUTTONS
 
 
-function addSurvey(title){
+/*function addSurvey(title){
     const newButton = document.createElement("button"); 
     newButton.id = "button"+title; 
     newButton.innerHTML = title; 
@@ -55,14 +57,12 @@ function addSurvey(title){
         window.open('https://forms.gle/SkLiuAeYRMSoi3F5A', '_blank'); 
     })
     document.getElementById("survey").appendChild(newButton);
-}
-
-//addSurvey('Take the survey!')
+}*/
 
 // create a function to add markers
 function addMarker(data){
     var marker = L.marker([data.lat,data.lng]).addTo(map)
-            .bindPopup(`<p> <b>Major:</b> ${data[qMajor]}<p> <p><b>Campus Affiliations: </b>${data[qClubs]}</p>`)
+            .bindPopup(`<p> <b>Major:</b> ${data[qMajor]}<p> <p><b>Campus Affiliations: </b>${(data[qClubs])?data[qClubs]:'N/A'}</p>`)
             .on('click', function(){
         //find index in array
         temp = 1; 
@@ -73,10 +73,10 @@ function addMarker(data){
         //show corresponding slide
         showSlides(slideIndex);
         allMarkers.forEach(function(marker) {
-            marker.setOpacity(0.25);
+            marker.setOpacity(0.5);
         });
         //no marker for first slide so use slideIndex-1 for index of allMarkers
-        allMarkers[slideIndex-1].setOpacity(10);
+        allMarkers[slideIndex-1].setOpacity(8);
     });
     allMarkers.push(marker);
 
@@ -141,8 +141,9 @@ function showSlides(n) {
     else{
         map.flyTo([lats[slideIndex],lngs[slideIndex]],17)
         allMarkers.forEach(function(marker) {
-            marker.setOpacity(0.25);
+            marker.setOpacity(0.5);
         });
-        allMarkers[slideIndex-1].setOpacity(10);
+        allMarkers[slideIndex-1].openPopup();
+        allMarkers[slideIndex-1].setOpacity(8);
     }
   }
