@@ -96,10 +96,16 @@ h1#logo{
   /* Slides */
   .mySlides {
     display: none;
-    padding: 70px;
+    padding: 65px;
     text-align: center;
     text-justify: auto;
     font-family: 'Raleway', sans-serif;
+  }
+
+  .myText {
+    text-align: left;
+    text-justify: auto;
+    font-size: 85%;
   }
   
   /* Next & previous buttons */

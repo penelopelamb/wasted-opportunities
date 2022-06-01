@@ -1,4 +1,3 @@
-
 let mapOptions = {'center': [34.0709,-118.444],'zoom':15}
 
 
@@ -82,15 +81,47 @@ container = document.querySelector(".slideshow-container")
 function addSlide(data){
     div = document.createElement("div");
     div.classList.add("mySlides");
-    text = document.createElement("text");
-    text.classList.add("myText");
-    text.innerHTML = data[q1];
-    div.appendChild(text);
-    container.appendChild(div);
-    p = document.createElement("p");
-    p.classList.add("myText");
-    p.innerHTML = data[q2];
-    div.appendChild(p);
+    
+    qu1 = document.createElement("h4");
+    qu1.classList.add("myText");
+    node1 = document.createTextNode(q1);
+    qu1.appendChild(node1)
+    div.appendChild(qu1)
+    or1 = document.createElement("p");
+    or1.classList.add("myText");
+    or1.innerHTML = data[q1];
+    div.appendChild(or1);
+
+    qu2 = document.createElement("h4");
+    qu2.classList.add("myText");
+    node2 = document.createTextNode(q2);
+    qu2.appendChild(node2)
+    div.appendChild(qu2)
+    or2 = document.createElement("p");
+    or2.classList.add("myText");
+    or2.innerHTML = data[q2];
+    div.appendChild(or2);
+
+    qu3 = document.createElement("h4");
+    qu3.classList.add("myText");
+    node3 = document.createTextNode(q3);
+    qu3.appendChild(node3)
+    div.appendChild(qu3)
+    or3 = document.createElement("p");
+    or3.classList.add("myText");
+    or3.innerHTML = data[q3];
+    div.appendChild(or3);
+
+    qu4 = document.createElement("h4");
+    qu4.classList.add("myText");
+    node4 = document.createTextNode(q4);
+    qu4.appendChild(node4)
+    div.appendChild(qu4)
+    or4 = document.createElement("p");
+    or4.classList.add("myText");
+    or4.innerHTML = data[q4];
+    div.appendChild(or4);
+
     container.appendChild(div);
 }
 
@@ -123,4 +154,3 @@ function showSlides(n) {
         });
         allMarkers[slideIndex-1].setOpacity(10);}
   }
-
