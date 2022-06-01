@@ -22,6 +22,8 @@ Our project will empower the general UCLA student community, including both curr
 ## :seedling:What technology was used?
 In this project, we will be using software such as Leaflet and Papaparse to create our map and import in our survey data. Moreover, we will be utilizing multiple programming languages: HTML, CSS, and Javascript, to create our mapplication.
 
+To create the website and mapplication itself, we utilzed 2 main HTML files, 1 CSS file, and 2 Javascript files. Our HTML files were for our Home and About pages. We connected the CSS and Javascript files to these main HTML files to incorporate style elements and our interactice map and slideshow features.
+
 ### What technical and ethical problems could there be in developing this tool?
 Although we narrowed our scope to target only students, there are still a wide variety of experiences and backgrounds within this community in regard to waste management and information. Thus, beginning with a smaller sample, the stories we receive may not represent every single perspective. Some technical problems that could occur are issues with mostly blank survey responses. Since a majority of our questions are not required, this could lead to incomplete profiles.
 
