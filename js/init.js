@@ -10,7 +10,10 @@ const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTnggxP8FVpcEJZ
 const q1 = 'What deters you from recycling and/or composting at UCLA?';
 const q2 = 'Which location on or near campus would you MOST like to see more recycling/compost bins on campus?';
 const q3 = 'Why do you think that UCLA has not met its Zero Waste Goal in the past?';
-const q4 = 'What else can UCLA/LA do better to encourage waste reduction and make recycling/composting more accessible?';
+const q4 = 'What else can UCLA/LA do better to encourage waste reduction and make recycling/composting more accessible? ';
+const qMajor = 'What is your major?';
+const qClubs = 'What are your campus affiliations?';
+var questions = [q1,q2,q3,q4];
 var lats = new Array();
 var lngs = new Array();
 var allMarkers = new Array();
@@ -58,16 +61,21 @@ function addSurvey(title){
 
 // create a function to add markers
 function addMarker(data){
-    var marker = L.marker([data.lat,data.lng]).addTo(map).on('click', function(){
-        temp = 1;
+    var marker = L.marker([data.lat,data.lng]).addTo(map)
+            .bindPopup(`<p> <b>Major:</b> ${data[qMajor]}<p> <p><b>Campus Affiliations: </b>${data[qClubs]}</p>`)
+            .on('click', function(){
+        //find index in array
+        temp = 1; 
         while(lats.indexOf(data.lat, temp) != lngs.indexOf(data.lng, temp)){
             temp++
         }
         slideIndex = lats.indexOf(data.lat,temp);
+        //show corresponding slide
         showSlides(slideIndex);
         allMarkers.forEach(function(marker) {
             marker.setOpacity(0.25);
         });
+        //no marker for first slide so use slideIndex-1 for index of allMarkers
         allMarkers[slideIndex-1].setOpacity(10);
     });
     allMarkers.push(marker);
@@ -82,47 +90,23 @@ function addSlide(data){
     div = document.createElement("div");
     div.classList.add("mySlides");
     
-    qu1 = document.createElement("h4");
-    qu1.classList.add("myText");
-    node1 = document.createTextNode(q1);
-    qu1.appendChild(node1)
-    div.appendChild(qu1)
-    or1 = document.createElement("p");
-    or1.classList.add("myText");
-    or1.innerHTML = data[q1];
-    div.appendChild(or1);
-
-    qu2 = document.createElement("h4");
-    qu2.classList.add("myText");
-    node2 = document.createTextNode(q2);
-    qu2.appendChild(node2)
-    div.appendChild(qu2)
-    or2 = document.createElement("p");
-    or2.classList.add("myText");
-    or2.innerHTML = data[q2];
-    div.appendChild(or2);
-
-    qu3 = document.createElement("h4");
-    qu3.classList.add("myText");
-    node3 = document.createTextNode(q3);
-    qu3.appendChild(node3)
-    div.appendChild(qu3)
-    or3 = document.createElement("p");
-    or3.classList.add("myText");
-    or3.innerHTML = data[q3];
-    div.appendChild(or3);
-
-    qu4 = document.createElement("h4");
-    qu4.classList.add("myText");
-    node4 = document.createTextNode(q4);
-    qu4.appendChild(node4)
-    div.appendChild(qu4)
-    or4 = document.createElement("p");
-    or4.classList.add("myText");
-    or4.innerHTML = data[q4];
-    div.appendChild(or4);
+    questions.forEach(question => {
+        addText(div,question,data[question])
+    })
 
     container.appendChild(div);
+}
+
+function addText(div,question,response){
+    q = document.createElement("h4");
+    q.classList.add("myText");
+    node = document.createTextNode(question);
+    q.appendChild(node)
+    div.appendChild(q)
+    ans = document.createElement("p");
+    ans.classList.add("myText");
+    ans.innerHTML = response;
+    div.appendChild(ans);
 }
 
 var slideIndex = 0;
@@ -147,10 +131,17 @@ function showSlides(n) {
       }
     slides[slideIndex].style.display = "block";
     //map zoom to marker
-    if (slideIndex == 0){map.flyTo([34.0709,-118.444],15)}
-    else{map.flyTo([lats[slideIndex],lngs[slideIndex]],17)
+    if (slideIndex == 0){
+        map.flyTo([34.0709,-118.444],15);
+        allMarkers.forEach(function(marker) {
+            marker.setOpacity(10);
+        });
+    }
+    else{
+        map.flyTo([lats[slideIndex],lngs[slideIndex]],17)
         allMarkers.forEach(function(marker) {
             marker.setOpacity(0.25);
         });
-        allMarkers[slideIndex-1].setOpacity(10);}
+        allMarkers[slideIndex-1].setOpacity(10);
+    }
   }
